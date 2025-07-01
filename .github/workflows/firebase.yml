@@ -3,7 +3,7 @@ name: Deploy to Firebase
 on:
   push:
     branches:
-      - main  # Ganti jika kamu menggunakan branch lain
+      - main
 
 jobs:
   build_and_deploy:
@@ -27,7 +27,7 @@ jobs:
       - name: 🚀 Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-        repoToken: "${{ secrets.GITHUB_TOKEN }}"
-        firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
-        projectId: "${{ secrets.FIREBASE_PROJECT_ID }}"
-        channelId: live
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          projectId: "${{ secrets.FIREBASE_PROJECT_ID }}"
+          channelId: live
